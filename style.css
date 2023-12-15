@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #ff99cc, #ff66b2);
+    font-family: 'Teko', sans-serif;
+}
+
+.caja {
+    width: 720px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden; /* Evitar que los brillos se vean fuera de la caja */
+    background-color: rgba(255, 255, 255, 0.3); /* 50% de transparencia */
+    /* ... (otros estilos) */
+    opacity: 1; /* La propiedad de opacidad de la caja no es necesaria si deseas un 50% de transparencia */
+}
+
+img {
+    width: 150px; /* Tamaño deseado de la imagen */
+    height: auto;
+    transform-origin: center center; /* Punto de origen de la transformación en el centro */
+    animation: balanceo 2s infinite ease-in-out, brillos 1s infinite alternate, glitter 1s infinite;
+    margin-top: 35px;
+}
+
+.p-con-margin {
+    margin-top: 50px;
+    color: #FF0DFF;
+    font-size: 18px;
+    animation: glitter 1s infinite;
+}
+
+/* Estilos para los reproductores de YouTube */
+.reproductor {
+    margin-top: 20px; /* Espaciado entre los reproductores */
+    display: inline-block;
+}
+
+@keyframes balanceo {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+}
+
+.no-balanceo {
+    animation: glitter 1s infinite, brillos 1s infinite alternate; /* Desactivar la animación de balanceo */
+    position: absolute;
+    top: 30px; /* Ajusta la posición vertical */
+    right: 350px; /* Ajusta la posición horizontal */
+}
+
+@keyframes brillos {
+    to {
+        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7),
+                    0 0 30px 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes glitter {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
