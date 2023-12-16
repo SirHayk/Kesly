@@ -72,3 +72,14 @@ img {
         opacity: 0.5;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .caja {
+        margin: 20px auto; /* Ajuste de margen para dispositivos móviles */
+    }
+
+    img {
+        width: 100%; /* Ajuste para dispositivos móviles */
+        margin: 0 auto; /* Centrar la imagen en dispositivos móviles */
+    }
+}
