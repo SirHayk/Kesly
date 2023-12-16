@@ -6,7 +6,9 @@ body {
 }
 
 .caja {
-    width: 720px;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
     height: 400px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -73,13 +75,18 @@ img {
     }
 }
 
-@media screen and (max-width: 600px) {
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 700px) {
     .caja {
-        margin: 20px auto; /* Ajuste de margen para dispositivos móviles */
+        margin: 20px auto;
     }
 
     img {
-        width: 100%; /* Ajuste para dispositivos móviles */
-        margin: 0 auto; /* Centrar la imagen en dispositivos móviles */
+        margin: 0 auto;
+    }
+
+    .no-balanceo {
+        margin: 10px auto;
     }
 }
