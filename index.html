@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Plantilla Web</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Kesly · Space</title>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-
-    <div class="caja">
-        <!-- Contenido de tu caja aquí -->
-        <img src="logo.png"  alt="KESLY">
-        <img src="foto.jpg" class="no-balanceo" alt="Profile">
-        <p class="p-con-margin">Kesly is my name. I like romantic music in English, I am positive, I love myself as I am. If you need to know more about me, ask me! Blessings</p>
-
-        <!-- Reproductores de YouTube -->
-        <div class="reproductor">
+<!-- partial:index.partial.html -->
+<div id="card">
+	<center>
+	 <img class="header-img" src="logo.png">
+</center>
+	<div class="image-crop">
+		<img id="avatar" src="foto.jpg"></img>
+	</div>
+	<div id="bio">
+		<p>Kesly is my name. I like romantic music in English, I am positive, I love myself as I am. If you need to know more about me, ask me! Blessings </p>
+	</div>
+	<center><div class="reproductor">
             <!-- Sustituye el siguiente código con el código de inserción de tu primer video de YouTube -->
-            <iframe width="200" height="112" src="https://www.youtube.com/embed/KTjHqOIwkow" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
-            <iframe width="200" height="112" src="https://www.youtube.com/embed/f6YXoBcu5Oo" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
-            <iframe width="200" height="112" src="https://www.youtube.com/embed/ZRWjdi2uz04" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
-    </div>
-
+            <iframe width="90" height="40" src="https://www.youtube.com/embed/KTjHqOIwkow" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
+            <iframe width="90" height="40" src="https://www.youtube.com/embed/f6YXoBcu5Oo" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
+            <iframe width="90" height="40" src="https://www.youtube.com/embed/ZRWjdi2uz04" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
+    </div></center>
+</div>
+<!-- partial -->
+  
 </body>
 </html>

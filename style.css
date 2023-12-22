@@ -1,92 +1,160 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #ff99cc, #ff66b2);
-    font-family: 'Teko', sans-serif;
+* {
+	padding: 0;
+	margin: 0;
 }
 
-.caja {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 50px auto;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    overflow: hidden; /* Evitar que los brillos se vean fuera de la caja */
-    background-color: rgba(255, 255, 255, 0.3); /* 50% de transparencia */
-    /* ... (otros estilos) */
-    opacity: 1; /* La propiedad de opacidad de la caja no es necesaria si deseas un 50% de transparencia */
+html,body {
+	background: #9800CA;
+	font-family: tahoma, sans-serif;
+	color: #E6EBEE;
 }
 
-img {
-    width: 150px; /* Tamaño deseado de la imagen */
-    height: auto;
-    transform-origin: center center; /* Punto de origen de la transformación en el centro */
-    animation: balanceo 2s infinite ease-in-out, brillos 1s infinite alternate, glitter 1s infinite;
-    margin-top: 35px;
+#card {
+	background-color: #660088;
+	height: auto;
+	width: 350px;
+	margin: 10vh auto;
+	border-radius: 25px;
+	padding-bottom: 1px;
+	box-shadow: 2px 2px 5px #8500B2;
 }
 
-.p-con-margin {
-    margin-top: 50px;
-    color: #FF0DFF;
-    font-size: 18px;
-    animation: glitter 1s infinite;
+.header-img {
+   margin-top: 20px;
+   animation: highlight 1.5s infinite;
 }
 
-/* Estilos para los reproductores de YouTube */
+h1 {
+	color: white;
+	text-align: center;
+	width: 100%;
+	background-color: #E6EBEE;
+	border-radius: 15px 25px 0 0;
+	color: #393B45;
+	padding: 30px 0;
+	font-weight: 800;
+	margin: 0;
+}
+
+.image-crop {
+	display: block;
+	position: relative;
+	background-color: #E6EBEE;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	margin-top: 15px;
+	overflow: hidden;
+	animation: highlight 1.5s infinite;
+}
+
 .reproductor {
     margin-top: 20px; /* Espaciado entre los reproductores */
-    display: inline-block;
+    margin: 20px;
 }
 
-@keyframes balanceo {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(30deg);
-    }
+#avatar {
+	display: inline;
+	height: 230px;
+	width: auto;
+	margin-left: -34px;
 }
 
-.no-balanceo {
-    animation: glitter 1s infinite, brillos 1s infinite alternate; /* Desactivar la animación de balanceo */
-    position: absolute;
-    top: 30px; /* Ajusta la posición vertical */
-    right: 350px; /* Ajusta la posición horizontal */
+#bio {
+	display: block;
+	margin: 10px auto;
+	width: 280px;
+	height: auto;
+	margin-top: 25px;
 }
 
-@keyframes brillos {
-    to {
-        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7),
-                    0 0 30px 10px rgba(255, 255, 255, 0.5);
-    }
+#bio p {
+	color: #A300D9;
+	font-weight: lighter;
+	font-size: 12px;
+	text-align: justify;
+    animation: glow 2s infinite;
 }
 
-@keyframes glitter {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
+#stats {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	width: 280px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	font-weight: 500;
 }
 
+.col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+}
 
-/* Estilos específicos para dispositivos móviles */
-@media screen and (max-width: 1300px) {
-    .caja {
-        margin: 20px auto;
-    }
+.stat {
+	font-size: 25px;
+	margin: 0;
+}
 
-    img {
-        margin: 0 auto;
-    }
+.label {
+	margin: 0;
+}
 
-    .no-balanceo {
-        margin: 10px auto;
-    }
+#buttons {
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	width: 280px;
+}
+
+button {
+	display: block;
+	position: relative;
+	padding: 10px 0;
+	width: 130px;
+	margin: 30px 0;
+	border-radius: 25px;
+	border: none;
+	font-size: 20px;
+	letter-spacing: 0.2px;
+	font-weight: 500;
+	background-color: #4069E2;
+	color: #E6EBEE;
+}
+
+button:focus {
+	display: none;
+}
+
+button:hover {
+	transform: scale(1.03);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+#msg{
+	background-color: #E6EBEE;
+	color: #393B45;
+}
+
+@keyframes highlight {
+   0% {
+      transform: scale(1); /* Estado inicial: escala normal */
+   }
+   50% {
+      transform: scale(1.1); /* Escala al 110% a la mitad de la animación */
+   }
+   100% {
+      transform: scale(1); /* Vuelve a la escala normal al final */
+   }
+}
+
+@keyframes glow {
+   0% { text-shadow: 0 0 5px #fff; }
+   50% { text-shadow: 0 0 20px #00f; }
+   100% { text-shadow: 0 0 5px #fff; }
 }
